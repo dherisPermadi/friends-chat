@@ -1,11 +1,12 @@
 - if conversation.present?
+  - opposite_user = conversation.opposed_user(user)
   .row
     .col-xs-1
       .mini-image-box
-        h3 = conversation.recipient.name[0]
+        h3 = opposite_user.name[0]
     .col-xs-11
       h2 style='margin-left:-35px'
-        = conversation.recipient.name
+        = opposite_user.name
   .chat-box
     .messages-list
       ul
