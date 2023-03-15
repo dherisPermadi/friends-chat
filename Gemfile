@@ -7,17 +7,21 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 
 gem "bootsnap", require: false
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'devise'
 gem 'dotenv-rails', '~> 2.8.1'
 gem "jbuilder"
 gem 'jquery-rails'
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "sassc-rails"
+gem "slim-rails"
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'factory_bot', '~> 6.2.1'
+  gem 'faker', '~> 2.23.0'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 5.1.2'
 end
 
 group :development do
