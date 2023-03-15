@@ -1,0 +1,2 @@
+var conversation = $('#friend-conversation');
+conversation.html("<%= j(render 'conversations/conversation', conversation: @conversation, user: @user) %>");

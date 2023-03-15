@@ -1,0 +1,23 @@
+- if conversation.present?
+  .row
+    .col-xs-1
+      .mini-image-box
+        h3 = conversation.recipient.name[0]
+    .col-xs-11
+      h2 style='margin-left:-35px'
+        = conversation.recipient.name
+  .chat-box
+    .messages-list
+      ul
+        = render 'conversations/conversation_content', messages: conversation.messages, user: user
+  .text-box
+    = form_for [conversation, conversation.messages.new], remote: true do |f|
+      .row
+        .col-xs-11
+          = f.hidden_field :user_id, value: user.id
+          = f.text_area :body, class: "form-control"
+        .col-xs-1
+          = f.submit "Send", class: "btn btn-info btn-lg"
+- else
+  .no-conversation
+    h3 = "Select friend to start a chat."
