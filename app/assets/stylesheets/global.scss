@@ -74,6 +74,22 @@ body {
   border-radius:50px;
 }
 
+.mini-image-box {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid #1d7874;
+  border-radius:50px;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.mini-image-box h3 {
+  margin: 10px 5px;
+}
 
 .image-box h1 {
  margin-top: 30px;
@@ -90,4 +106,91 @@ body {
   height: 25px;
   background-color: #1d7874;
   position: fixed;
+}
+
+p a {
+  text-decoration: none;
+  color: #f4c095;
+}
+
+p a:hover {
+  color: #ee2e31;
+}
+
+.friend-list {
+  margin: 5px;
+  text-align: center;
+}
+
+.chat-box {
+  height: 500px;
+  margin: 5px 20px 5px 30px;
+  background-color: white;
+}
+
+.text-box {
+  margin: 5px;
+}
+
+h3 .friend-list-title {
+  border-bottom: 2px solid #1d7874;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+.friend {
+  border: 2px solid white;
+  background-color: white;
+  margin: 10px;
+  text-align: left;
+  color: black;
+}
+
+.list {
+  height: 600px;
+  overflow: scroll;
+}
+
+.no-conversation h3 {
+  text-align: center;
+  margin: 300px auto;
+}
+
+.text-box .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.text-box .button-alignment {
+  display: flex;
+  justify-content: right;
+}
+
+.messages-list {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.message-sent {
+  position: relative;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  margin: 5px 20px;
+  padding: 10px;
+  float: right;
+  color:black;
+}
+
+.message-received {
+  background-color: #F1F0F0;
+  border-color: #EEEEEE;
+  margin: 5px 20px;
+  padding: 10px;
+  float: left;
+  color:black;
+}
+
+ul {
+  list-style-type: none;
 }

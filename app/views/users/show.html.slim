@@ -1,0 +1,24 @@
+.row
+  .col-md-8
+    .card
+      #friend-conversation
+        = render 'conversations/conversation', conversation: @conversations.first, user: @user
+  .col-md-4
+    .card
+      .friend-list
+        h3.friend-list-title
+          = "FRIEND LIST"
+        .list
+          - @users.each do |user|
+            = link_to conversations_path(sender_id: @user.id, recipient_id: user.id), remote: true, method: :post do
+              .row.friend
+                .col-xs-2
+                  .mini-image-box
+                    h3 = user.name[0]
+                .col-xs-10
+                  h4 style='margin-bottom:0px'
+                    = user.name.truncate(30)
+                  p style='margin-top:0px'
+                    = user.email
+javascript:
+  $('.user-profile').get(0).textContent = "Hello, #{@user.email}";

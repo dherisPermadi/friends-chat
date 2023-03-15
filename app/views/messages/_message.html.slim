@@ -1,0 +1,8 @@
+li
+  .row
+    - if user.id == message.user_id
+      .message-sent
+        = message.body
+    - else
+      .message-received
+        = message.body

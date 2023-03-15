@@ -1,0 +1,2 @@
+$('.messages-list').find('ul').append("<%= j(render 'messages/message', message: @message, user: @user) %>");
+$('.text-box').find('.row').find('textarea').val('');
