@@ -1,0 +1,14 @@
+.card
+  .user-list
+    br
+    h1 = "Welcome to Friends Chat !!"
+    h3 = "Select your user to start your chats."
+    br
+    .row
+      - @users.each do |user|
+        .col-md-3
+          .mini-card
+            .image-box
+              h1 = user.name[0].upcase
+            h3 = user.name.truncate(20)
+            p = user.email
